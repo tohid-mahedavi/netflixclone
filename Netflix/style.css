@@ -1,0 +1,587 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/header.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+nav button {
+    border: none;
+    outline: none;
+    background-color: #db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.lang-btn {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+}
+
+.lang-btn img {
+    width: 10px;
+    margin-left: 10px;
+} 
+
+.fa-globe {
+    color: #fff;
+    width: 10px;
+    margin-right: 10px;
+}
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.header-content h1 {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+}
+
+.header-content h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.email-signup {
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.email-signup input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+
+.email-signup button {
+    background-color: #db0001;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+
+
+.features {
+    padding: 50px 12%;
+    font-size: 22px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.text-col, .img-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col img {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.features h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.faq {
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.faq h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.accordion {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .content {
+    background-color: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.accordion input[type="radio"]:checked + label::after {
+    transform: rotate(135deg);
+}
+
+.faq small {
+    font-size: 13px;
+}
+
+.faq .email-signup {
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+
+.footer {
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+
+.footer h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.footer .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a {
+    display: block;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.footer .row {
+    align-items: flex-start;
+    padding: 10px 0px;
+}
+
+.footer .lang-btn {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.copyright-text {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        width: 100px;
+    }
+
+    nav button {
+        padding: 5px 10px;
+    }
+
+    nav .lang-btn {
+        padding: 4px 8px;
+    }
+
+    .header-content {
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+
+    .header-content h1 {
+        font-size: 30px;
+    }
+
+    .email-signup button {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .text-col, .img-col {
+        flex-basis: 100%;
+    }
+
+    .features h2 {
+        font-size: 30px;
+    }
+
+    .features p {
+        font-size: 15px;
+    }
+
+    .row:nth-child(2), .row:nth-child(4) {
+        flex-direction: column-reverse;
+    }
+
+    .features .row {
+        padding: 10px 0;
+    }
+
+    .faq h2 {
+        font-size: 20px;
+    }
+
+    .accordion .content {
+        font-size: 14px;
+    }
+
+    .accordion li label {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    label::after {
+        font-size: 22px;
+    }
+}
+
+
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  /* CONTAINER OF WHOLE MODULE
+  -------------------------------- */
+  .netflixContainer {
+    background-color: #000;
+  }
+  
+  /* GRID
+  -------------------------------------- */
+  /* Define the default grid (narrowest viewports) */
+  .netflix {
+    display: grid;
+  }
+  
+  /* Place the images on the grid. All other items are auto-placed. */
+  .netflix img:nth-of-type(1) {
+    grid-row: 3;
+  }
+  
+  .netflix img:nth-of-type(2) {
+    grid-row: 6;
+  }
+  
+  .netflix img:nth-of-type(3) {
+    grid-row: 9;
+  }
+  
+  /* Center these horizontally */
+  .netflix a {
+    justify-self: center;
+  }
+  
+  /* Switch to three-column grid */
+  @media (min-width: 56.3125rem) {
+    .netflix {
+      /* Define the grid */
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 37px;
+    }
+    /* Place items on the grid */
+    .netflix a,
+    .netflix h2 {
+      grid-column: 1 / span 3;
+    }
+    .netflix img:nth-of-type(1n) {
+      grid-row: 3;
+    }
+    .netflix h3 {
+      grid-row: 4;
+    }
+    .netflix p {
+      grid-row: 5;
+    }
+  }
+  
+  /* Adjust grid to move link (button) next to module heading */
+  @media (min-width: 61.9375rem) {
+    .netflix {
+      grid-column-gap: 60px;
+    }
+    .netflix h2 {
+      grid-column: 1 / span 2;
+    }
+    .netflix a {
+      grid-column: 3;
+      justify-self: end;
+    }
+  }
+  
+  /* STYLING
+  -------------------------------------- */
+  .netflix {
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 80px;
+    padding-top: 50px;
+    text-align: center;
+    width: 80%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  @media (min-width: 33.8125rem) {
+    .netflix {
+      width: 63%;
+    }
+  }
+  
+  @media (min-width: 56.3125rem) {
+    .netflix {
+      padding-bottom: 73px;
+      padding-top: 70px;
+    }
+  }
+  
+  .netflix h2 {
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.175;
+    margin-bottom: 11px;
+  }
+  
+  @media (min-width: 61.9375rem) {
+    .netflix h2 {
+      font-size: 1.1875rem;
+      margin-top: 0;
+      text-align: left;
+      transform: translateX(-15px);
+    }
+  }
+  
+  @media (min-width: 81rem) {
+    .netflix h2 {
+      font-size: 1.375rem;
+    }
+  }
+  
+  @media (min-width: 93.8125rem) {
+    .netflix h2 {
+      font-size: 1.625rem;
+    }
+  }
+  
+  @media (min-width: 108.1875rem) {
+    .netflix h2 {
+      font-size: 1.875rem;
+    }
+  }
+  
+  .netflix h3 {
+    font-size: 1.16979rem;
+    line-height: 1.25;
+  }
+  
+  @media (min-width: 33.8125rem) {
+    .netflix h3 {
+      margin-top: 1.375rem;
+    }
+  }
+  
+  .netflix a {
+    background-color: #de0611;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    font-size: 0.9375rem;
+    letter-spacing: .125em;
+    margin-bottom: 1.5rem;
+    max-width: 17.1875rem;
+    padding: 18px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  @media (min-width: 33.8125rem) {
+    .netflix a {
+      margin-bottom: 4.125rem;
+    }
+  }
+  
+  @media (min-width: 43.8125rem) {
+    .netflix a {
+      font-size: 0.875rem;
+    }
+  }
+  
+  @media (min-width: 56.3125rem) {
+    .netflix a {
+      margin-bottom: 5.3125rem;
+      max-width: 16.25rem;
+    }
+  }
+  
+  @media (min-width: 61.9375rem) {
+    .netflix a {
+      transform: translateX(15px);
+    }
+  }
+  
+  .netflix p {
+    color: #8b8b8b;
+    line-height: 1.125;
+    margin-bottom: 4.6875rem;
+  }
+  
+  .netflix p:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  @media (min-width: 56.3125rem) {
+    .netflix p {
+      margin-bottom: 0;
+      margin-top: 0.6875em;
+    }
+  }
+  
+  .netflix img {
+    max-width: 100%;
+  }
+  
+  /* For browsers that don't support grid */
+  .netflix {
+    max-width: 540px;
+  }
+  
+  .netflix h3 {
+    margin-bottom: .75em;
+  }
+  
+  /* Undo what was set for browsers that don't support grid */
+  @supports (display: grid) {
+    .netflix {
+      max-width: initial;
+    }
+    .netflix h3 {
+      margin-bottom: 0;
+    }
+  }
+  
+
+.originals{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.row{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.row img{
+    padding-left: 20px;
+    border: 5px;
+    border-color: #db0001;
+    transition: transform .3s ease;
+}
+
+.row img:hover{
+    transform: scale(0.8);
+}
